@@ -22,5 +22,5 @@ if value<25 or (value>25 and value<45):
 
 elif value>75 or (value>55 and value<75):
     # st.success("Extreme Greed")
-    st.metric(label=f"Status: :green{status}",value=value)
+    st.metric(label=f"Status: :green[{status}]",value=value)
 
