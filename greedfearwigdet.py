@@ -16,8 +16,8 @@ value=int(index_data.value)
 status=index_data.description
 
 #wiget design
-date=dt.datetime
-st.title(f"Fear& Greed Index: {date.year}/{date.month}/{date.day}")
+date=dt.now()
+st.title(f"Fear& Greed Index: {date.date()}")
 st.metric(label=f"Status: {status}",value=value)
 if value<25:
     st.error("Extreme Fear")
