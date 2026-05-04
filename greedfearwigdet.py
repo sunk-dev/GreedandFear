@@ -5,9 +5,9 @@ def get_fing_data():
     index_data = fear_and_greed.get()
     return index_data
 # return data
-'''
-FearGreedIndex(value=66.6, description='greed', last_update=datetime.datetime(2026, 5, 1, 23, 59, 39, tzinfo=datetime.timezone.utc))
-'''
+
+# FearGreedIndex(value=66.6, description='greed', last_update=datetime.datetime(2026, 5, 1, 23, 59, 39, tzinfo=datetime.timezone.utc))
+
 
 # page setting
 st.set_page_config(page_title="F&G Index Wiget", layout="centered")
