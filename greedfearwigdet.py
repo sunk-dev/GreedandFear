@@ -53,7 +53,7 @@ color = "red" if value < 45 else "green" if value > 55 else "orange"
 
 # 메트릭 표시 (Label에 상태, Value에 점수)
 st.metric(
-    label=f"Status: {status}", 
-    value=f"{value}",
+    label=f"Status: :{color}[{status}]", 
+    value=f":{color}[{value}]",
     delta=None # 변화량을 넣고 싶으면 여기에 추가
 )
