@@ -1,12 +1,10 @@
 import fear_and_greed
 import streamlit as st
-from datetime import datetime
+import datetime as dt
 def get_fing_data():
     index_data = fear_and_greed.get()
     return index_data
 # return data
-
-# FearGreedIndex(value=66.6, description='greed', last_update=datetime.datetime(2026, 5, 1, 23, 59, 39, tzinfo=datetime.timezone.utc))
 
 
 # page setting
@@ -16,10 +14,13 @@ value=int(index_data.value)
 status=index_data.description
 
 #wiget design
-date=datetime.now()
+date=dt.now()
 st.title(f"Fear& Greed Index: {date.date()}")
-st.metric(label=f"Status: {status}",value=value)
-if value<25:
-    st.error("Extreme Fear")
-elif value>75:
-    st.success("Extreme Greed")
+if value<25 or (value>25 and value<45):
+    # st.error("Extreme Fear")
+    st.metric(label=f"Status: :red{status}",value=value)
+
+elif value>75 or (value>55 and value<75):
+    # st.success("Extreme Greed")
+    st.metric(label=f"Status: :green{status}",value=value)
+
